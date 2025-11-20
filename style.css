@@ -1,0 +1,123 @@
+/* style.css - VERSIUNEA ACTUALIZATĂ COMPLET */
+
+/* --- 1. SETĂRI GENERALE --- */
+
+html {
+  scroll-behavior: smooth; /* Face pagina să coboare lin, nu brusc */
+}
+
+body {
+  background-color: #f4f4f4; /* Fundal gri deschis */
+  font-family: Arial, sans-serif;
+  margin: 0; /* Elimină spațiul alb de pe marginile browserului */
+}
+
+h1 {
+  color: #333; /* Gri închis pentru titluri */
+  text-align: center; /* Opțional: Centrează titlul principal */
+  margin-top: 20px;
+}
+
+/* --- 2. STILURI PENTRU MENIU (NAVIGAȚIE) --- */
+
+nav {
+  background-color: #333; /* Fundal gri închis (aproape negru) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Umbră sub meniu */
+  position: sticky; /* Face meniul să rămână sus când dai scroll */
+  top: 0;
+  z-index: 1000; /* Se asigură că stă peste imagini */
+}
+
+nav ul {
+  list-style-type: none; /* Scoate punctele din listă */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Așază butoanele orizontal */
+  justify-content: center; /* Le pune pe mijloc */
+  flex-wrap: wrap; /* Dacă nu au loc, trec pe rândul următor */
+}
+
+nav li {
+  /* Stiluri pentru elementele listei - momentan standard */
+}
+
+nav a {
+  display: block; /* Face linkul un buton solid */
+  color: white; /* Text alb */
+  text-align: center;
+  padding: 15px 20px; /* Mărimea butonului */
+  text-decoration: none; /* Scoate linia de sub text */
+  font-weight: bold;
+  transition: background-color 0.3s; /* Animație la culoare */
+}
+
+/* Când pui mouse-ul pe buton */
+nav a:hover {
+  background-color: #555; /* Se deschide la culoare */
+  color: #ffcc00; /* Scrisul devine galben/auriu */
+}
+
+/* Butonul paginii active */
+nav a.activ {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+/* --- 3. STILURI PENTRU PRODUSE --- */
+
+/* Containerul care ține toate produsele unul lângă altul */
+.galerie-produse {
+  display: flex;
+  flex-wrap: wrap; /* Permite trecerea pe rândul următor */
+  gap: 20px; /* Spațiu între produse */
+  margin-top: 20px;
+  justify-content: center; /* Centrează produsele în pagină */
+  padding: 20px; /* Puțin spațiu pe margini */
+}
+
+/* Cutia fiecărui produs individual */
+.produs {
+  background-color: white;
+  border: 1px solid #ddd; /* Bordură fină gri */
+  border-radius: 8px; /* Colțuri rotunjite */
+  width: 300px; /* Lățimea fixă a cardului de produs */
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* O umbră discretă */
+  transition: transform 0.3s ease; /* Animație fină la hover */
+}
+
+/* Efect când pui mouse-ul pe produs */
+.produs:hover {
+  transform: translateY(-5px); /* Se ridică puțin */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imaginea produsului */
+.produs img {
+  width: 100%; /* Imaginea ocupă tot spațiul disponibil în cutie */
+  height: 200px; /* Înălțime fixă */
+  object-fit: cover; /* Taie imaginea ca să se potrivească perfect */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Titlul produsului */
+.produs h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+/* Datele tehnice */
+.date-tehnice {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9em; /* Scris puțin mai mic */
+  color: #555;
+}
+
+.date-tehnice p {
+  margin: 5px 0; /* Spațiu mic între rândurile de specificații */
+}
